@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mesh Texture Editor</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/color_picker.css">
+        
+    </head>
+    <body>
+        <div id="my_navbar" class="text-center">
+            <img src="./images/PoliLogo.png" alt="Poltecnico di Milano" id="poli">
+            <a href="https://www.thecoding.cloud"  id="tcc">
+                <img src="./images/TCCLogo.png">
+            </a>
+            <h1 id="title">Mesh Texture Editor</h1>
+        </div>
+        <div id="main_container">
+            <div id="main_left_container" style="width: 400px">
+                <div id="mesh_zone"></div>
+                <div id="overDrop">
+                    <div id="dropZone">
+                    </div>
+                </div>
+                <div id="bottom_left_container" style="text-align: left">
+                    <canvas id="renderCanvas" touch-action="none" height="400" width="400"></canvas>
+                    <button id="progress_button"> 50 steps</button>
+                    <button id="import_button"> Import</button>
+                </div>
+            </div>
+            <div id="main_right_container">
+                <canvas id="textureCanvas" height="600" width="600"></canvas>
+                
+                
+            </div>
+            <div id="lateral_main_container">
+                <div class="color-picker-panel">
+                    <div class="panel-row">
+                        <div class="swatches default-swatches"></div>
+                        <button class="button eyedropper">Get Color</button>
+                    </div>
+                    <div class="panel-row">
+                        <div class="spectrum-map">
+                            <button id="spectrum-cursor" class="color-cursor"></button>
+                            <canvas id="spectrum-canvas"></canvas>
+                        </div>
+                        <div class="hue-map">
+                            <button id="hue-cursor" class="color-cursor"></button>
+                            <canvas id="hue-canvas"></canvas>
+                        </div>
+                    </div>
+                    <div class="panel-row">
+                        <div id="rgb-fields" class="field-group value-fields rgb-fields">
+                            <div class="field-group">
+                                <label for="" class="field-label">R:</label>
+                                <input type="number" max="255" min="0" id="red" class="field-input rgb-input"/>
+                            </div>
+                            <div class="field-group">
+                                <label for="" class="field-label">G:</label>
+                                <input type="number" max="255" min="0" id="green" class="field-input rgb-input"/>
+                            </div>
+                            <div class="field-group">
+                                <label for="" class="field-label">B:</label>
+                                <input type="number" max="255" min="0" id="blue" class="field-input rgb-input"/>
+                            </div>
+                        </div>
+                        <div id="hex-field" class="field-group value-fields hex-field active">
+                            <label for="" class="field-label">Hex : </label>
+                            <input type="text" id="hex" class="field-input"/>
+                        </div>
+                        <div id="line-size-field" class="field-group value-fields active">
+                            <label for="" class="field-label">Size:</label>
+                            <input type="number" id="line_input" class="field-input" value="7" />
+                        </div>
+                        <button id="mode-toggle" class="button mode-toggle">Mode</button>
+                    </div>
+                    <div class="panel-row">
+                        <h2 class="panel-header">Custom Colors</h2>
+                        <div id="user-swatches" class="swatches custom-swatches">
+                        </div>
+                        <button id="add-swatch" class="button add-swatch">
+                        <span id="color-indicator" class="color-indicator"></span><span>Add to Swatches</span>
+                        </button>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </body>
+        <script type="text/javascript" src="./js/jscolor.min.js"></script>
+        <script type="text/javascript" src="./js/tinycolor.js"></script>
+        <script type="text/javascript" src="./js/color_picker.js"></script>
+        <script src="./js/babylon.js"></script>
+        <script src="./js/pep.js"></script>
+        <script type="text/javascript" src="./js/grid.material.js"></script>
+        <script type="text/javascript" src="./js/texture_editor.js"></script>
+    </html>
