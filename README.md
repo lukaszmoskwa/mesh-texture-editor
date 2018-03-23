@@ -1,18 +1,19 @@
-# 3D Model Visualizator
+# Mesh Texture Editor
+
+This simple web page was created to edit texture starting with a mesh with Texture coordinates for the Computer Graphic's course at Politecnico di Milano.
 
 
-This simple web page was created to display graphically an .OBJ model using BabylonJS starting from geometric vertices, texture coordinates, vertex normals and polygonal faces for the Computer Graphic's course at Politecnico di Milano.
 
 ### Screenshot
 
-![](https://i.imgur.com/qfSX9RI.png)
+![](https://i.imgur.com/zzCKuJ6.png)
 
 
 ### Demo
 
 A fully functional demo can be found here:
 
-[https://www.thecoding.cloud/projects/3dmv/](https://www.thecoding.cloud/projects/3dmv/)
+[https://www.thecoding.cloud/projects/3dmv/](https://www.thecoding.cloud/projects/mesh_texture_editor/)
 
 
 ### Todo
